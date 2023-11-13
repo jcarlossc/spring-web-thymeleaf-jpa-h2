@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editar produto</title>
+        <link th:href = "@{/bootstrap/bootstrap.min.css}" rel="stylesheet">
+        <link th:href = "@{/css/style.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <h1>Editar produto</h1>
+                <br />
+                <form action="#" th:action="@{/salvar}" th:object="${produto}" method="post">
+                    <div class="mb-3">
+                        <label for="Id" class="form-label">Id</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:field="*{id}" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:field="*{nome}" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Preco" class="form-label">Preço</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{preco}" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+        </div>    
+    </body>
+</html>

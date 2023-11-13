@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projeto Spring Boot</title>
+        <link th:href = "@{/bootstrap/bootstrap.min.css}" rel="stylesheet">
+        <link th:href = "@{/css/style.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div th:switch="${listarProdutos}" class="box">
+                <h2 th:case="null">No users yet!</h2>
+                    <div th:case="*">
+                        <h2 class="mb-4 mt-4">Lista de Produtos</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Preço</th>
+                                    <th scope="col">Editar/Apagar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="produto : ${listarProdutos}">
+                                    <th scope="row" th:text="${produto.id}">Id</th>
+                                    <td scope="row" th:text="${produto.nome}">Nome</td>
+                                    <td scope="row" th:text="${produto.preco}">Preço</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success"><a th:href="@{'/editar/' + ${produto.id}}"><span class="nome-botao">Editar</span></a></button>
+                                        <button type="button" class="btn btn-danger"><a th:href="@{'/apagar/' + ${produto.id}}"><span class="nome-botao">Excluir</span></a></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>      
+                <button type="button" class="btn btn-primary"><a href="/novo"><span class="nome-botao">Adicionar novo produto.</span>></a></button>
+            </div>
+        </div>
+    </body>
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Criar novo produto</title>
+        <link th:href = "@{/bootstrap/bootstrap.min.css}" rel="stylesheet">
+        <link th:href = "@{/css/style.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <h1>Criar novo produto</h1>
+                <br />
+                <form action="#" th:action="@{/salvar}" th:object="${produto}" method="post">
+                    <div class="mb-3">
+                    <label for="Nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" aria-describedby="nome" th:field="*{nome}" />
+                    </div>
+                    <div class="mb-3">
+                    <label for="Preco" class="form-label">Preço</label>
+                    <input type="text" class="form-control" id="preco" th:field="*{preco}" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+        </div>    
+    </body>
+</html>
