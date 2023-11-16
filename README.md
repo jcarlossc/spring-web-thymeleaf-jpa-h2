@@ -1,2 +1,2 @@
-# spring-web-thymeleaf-jpa-h2
+# SpringBoot, Spring-web, Thymeleaf, Jpa e H2
 Spring Boot básico. 
