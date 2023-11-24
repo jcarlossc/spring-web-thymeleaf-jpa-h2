@@ -1,5 +1,5 @@
 # Projeto crud básico Springboot
-## Spring-boot - Spring-web - Thymeleaf - Jpa - H2
+## Dependências: Spring-boot - Spring-web - Thymeleaf - Jpa - H2
 
 
 
@@ -17,5 +17,6 @@ arquivo XML mesmo em ambientes offline.
 
 # Observações:
   
-  * Acesso ao servidor local: '''localhost:8080'''
-  * 
+  * Acesso ao servidor local: ```localhost:8080```
+  * Acesso ao banco de dados H2: ```localhost:8080/h2```
+  * Usuário e senha do banco de dados, respectivamente: ```root``` e ```123```
