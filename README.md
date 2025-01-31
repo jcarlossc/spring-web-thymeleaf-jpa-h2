@@ -1,7 +1,7 @@
 # Projeto crud básico Springboot
 ## Dependências: Spring-boot - Spring-web - Thymeleaf - Jpa - H2
 
-O projeto é bem simples mas demonstra o funcionamento da interface Jpa nas consultas(crud) ao banco de dados e a utilização do Thymeleaf, que é um mecanismo de modelo(views) Java XML/XHTML/HTML5 que funciona em ambientes Web e não Web. 
+O projeto é bem simples mas demonstra o funcionamento da interface Jpa nas consultas(crud), banco de dados e a utilização do Thymeleaf, que é um mecanismo de modelo(views) Java XML/XHTML/HTML5 que funciona em ambientes Web e desktop. 
 Ele é mais adequado para servir XHTML/HTML5 na camada de visualização de aplicativos da Web baseados em MVC, mas pode processar qualquer arquivo XML mesmo em ambientes offline.
 
 # Tecnologias utilizadas
